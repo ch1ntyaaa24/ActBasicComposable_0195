@@ -51,6 +51,7 @@ fun FormDataDiri(modifier: Modifier){
                         selected = textJK == item,
                         onClick = { textJK = item }
                     ),
+                    verticalAlignment = Alignment.CenterVertically
             }
         }
     }
