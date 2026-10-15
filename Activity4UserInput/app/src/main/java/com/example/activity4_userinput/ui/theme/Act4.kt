@@ -1,0 +1,11 @@
+package com.example.activity4_userinput.ui.theme
+
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+
+
+@Composable
+fun FormDataDiri(modifier: Modifier){
+    //variabela-variabel untuk mengingat nilai masukan dari keyboard
+    var textNama by remember {mutableStated0f(value="")}
+}
