@@ -20,21 +20,23 @@ import org.w3c.dom.Text
 
 
 @Composable
-fun FormDataDiri(modifier: Modifier){
+fun FormDataDiri(modifier: Modifier) {
     //variabela-variabel untuk mengingat nilai masukan dari keyboard
-    var textNama by remember {mutableSetOf(value="")}
-    var textAlamat by remember {mutableSetOf(value="")}
-    var textJK by remember { mutableSetOf(values="")}
-    val gender: List<String> = listOf("Laki-laki","Perempuan")
+    var textNama by remember { mutableSetOf(value = "") }
+    var textAlamat by remember { mutableSetOf(value = "") }
+    var textJK by remember { mutableSetOf(values = "") }
+    val gender: List<String> = listOf("Laki-laki", "Perempuan")
 
     //variabel-variabel untuk menyimpan data yang diperboleh dari komponen UI
-    var nama by remember { mutableSetOf(value="")}
-    var alamat by remember { mutableSetOf(value="") }
-    var jenis by remember { mutableSetOf(value="") }
+    var nama by remember { mutableSetOf(value = "") }
+    var alamat by remember { mutableSetOf(value = "") }
+    var jenis by remember { mutableSetOf(value = "") }
 
-    Column(modifier = Modifier.padding(top = 50.dp),
+    Column(
+        modifier = Modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.CenterHorizontally) {
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         OutlinedTextField(
             value = textNama,
             singleLine = true,
@@ -53,18 +55,26 @@ fun FormDataDiri(modifier: Modifier){
                         onClick = { textJK = item }
                     ),
                     verticalAlignment = Alignment.CenterVertically
-                ){
+                ) {
                     RadioButton(
                         selected = textJK == item,
                         onClick = {
                             textJK = item
                         }
                     )
+                    Text(item)
                 }
             }
         }
+        OutlinedTextField(
+            value = textAlamat,
+            singleLine = true,
+            modifier = Modifier.width(250.dp),
+            label = { Text("Alamat") },
+            onValueChange = {
+                textAlamat = it
+            }
+        )
     }
-
-
-
 }
+
