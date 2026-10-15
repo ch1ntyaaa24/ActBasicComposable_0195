@@ -1,5 +1,9 @@
 package com.example.activity4_userinput.ui.theme
 
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -18,6 +22,9 @@ fun FormDataDiri(modifier: Modifier){
     var nama by remember { mutableSetOf(value="")}
     var alamat by remember { mutableSetOf(value="") }
     var jenis by remember { mutableSetOf(value="") }
+
+    Column(modifier = Modifier.padding(top = 50.dp),
+        verticalArrangement = Arrangement.Top)
 
 
 }
