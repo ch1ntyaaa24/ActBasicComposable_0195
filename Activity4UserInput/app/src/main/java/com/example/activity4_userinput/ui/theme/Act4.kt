@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.runtime.Composable
@@ -33,7 +34,8 @@ fun FormDataDiri(modifier: Modifier){
         OutlinedTextField(
             value = textNama,
             singleLine = true,
-            shape = MaterialTheme.shapes.large
+            shape = MaterialTheme.shapes.large,
+            modifier = Modifier.width(250.dp),
         )
     }
 
