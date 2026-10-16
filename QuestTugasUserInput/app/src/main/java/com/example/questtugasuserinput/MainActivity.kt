@@ -83,3 +83,11 @@ fun BiodataScreen() {
                     color = colorResource(R.color.text_subtitle),
                     fontSize = dimensionResource(R.dimen.subtitle_size).value.sp
                 )
+
+                Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_small))) {
+                    OutlinedTextField(
+                        value = firstName, onValueChange = { firstName = it },
+                        label = { Text(stringResource(R.string.first_name)) },
+                        shape = RoundedCornerShape(dimensionResource(R.dimen.field_corner)),
+                        singleLine = true, modifier = Modifier.weight(1f)
+                    )
