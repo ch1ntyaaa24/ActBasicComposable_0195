@@ -6,5 +6,6 @@
     <color name="text_subtitle">#9E9E9E</color>
     <color name="outline_color">#424242</color>
     <color name="button_disabled">#E0E0E0</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="button_disabled_text">#FFFFFFFF</color>
+
 </resources>
