@@ -67,4 +67,10 @@ fun BiodataScreen() {
                         topEnd = dimensionResource(R.dimen.card_corner)))
                     .background(colorResource(R.color.card_background))
                     .padding(dimensionResource(R.dimen.screen_padding))
+            ) {Column(
+                modifier = Modifier.verticalScroll(rememberScrollState()),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_medium))
             ) {
+
+            }
