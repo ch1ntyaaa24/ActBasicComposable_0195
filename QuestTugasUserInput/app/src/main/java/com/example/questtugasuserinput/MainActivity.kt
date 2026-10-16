@@ -77,3 +77,9 @@ fun BiodataScreen() {
                     color = colorResource(R.color.purple_title),
                     fontSize = dimensionResource(R.dimen.title_size).value.sp,
                     fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = stringResource(R.string.form_subtitle),
+                    color = colorResource(R.color.text_subtitle),
+                    fontSize = dimensionResource(R.dimen.subtitle_size).value.sp
+                )
