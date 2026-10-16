@@ -7,5 +7,5 @@
     <color name="outline_color">#424242</color>
     <color name="button_disabled">#E0E0E0</color>
     <color name="button_disabled_text">#FFFFFFFF</color>
-
+    <color name="button_enabled">#6A35C9</color>
 </resources>
