@@ -7,5 +7,6 @@
     <string name="email">Email</string>
     <string name="birth_date">Tgl Lahir</string>
     <string name="experience">Experience></string>
+    <string name="choose_skill">Pili SkillAnda :</string>
 
 </resources>
