@@ -34,10 +34,25 @@ fun BiodataScreen() {
     var uiux by remember { mutableStateOf(false) }
     var web by remember { mutableStateOf(false) }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    QuestTugasUserInputTheme {
-        Greeting("Android")
-    }
-}
+    var showDatePicker by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(false) }
+    val options = stringArrayResource(R.array.experience_options)
+    val datePickerState = rememberDatePickerState()
+
+    val isFormValid = firstName.isNotBlank() && lastName.isNotBlank() &&
+            email.isNotBlank() && birthDate.isNotBlank() &&
+            experience.isNotBlank() && (android || uiux || web)
+    Scaffold(
+        containerColor = colorResource(R.color.screen_background)
+    ) { innerPadding ->
+        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
+
+            // Gambar header
+            Image(
+                painter = painterResource(R.drawable.header_spider),
+                contentDescription = stringResource(R.string.cd_header_image),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.header_height))
+            )
