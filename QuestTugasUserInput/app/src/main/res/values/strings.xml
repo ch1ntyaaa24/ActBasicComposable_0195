@@ -10,5 +10,5 @@
     <string name="choose_skill">Pili SkillAnda :</string>
     <string name="skill_android">Android</string>
     <string name="skill_uiux">UI/UX</string>
-
+    <string name="skill_web">Web</string>
 </resources>
