@@ -72,5 +72,8 @@ fun BiodataScreen() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_medium))
             ) {
-
-            }
+                Text(
+                    text = stringResource(R.string.form_title),
+                    color = colorResource(R.color.purple_title),
+                    fontSize = dimensionResource(R.dimen.title_size).value.sp,
+                    fontWeight = FontWeight.Bold
