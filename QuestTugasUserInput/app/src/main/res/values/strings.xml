@@ -6,15 +6,17 @@
     <string name="last_name">Nama Belakang</string>
     <string name="email">Email</string>
     <string name="birth_date">Tgl Lahir</string>
-    <string name="experience">Experience></string>
-    <string name="choose_skill">Pili SkillAnda :</string>
+    <string name="experience">Experience</string>
+    <string name="choose_skill">Pilih Skill Anda :</string>
     <string name="skill_android">Android</string>
     <string name="skill_uiux">UI/UX</string>
     <string name="skill_web">Web</string>
     <string name="proceed">Proceed</string>
+    <string name="ok">OK</string>
+    <string name="date_format">dd/MM/yyyy</string>
     <string name="cd_header_image">Gambar header</string>
     <string name="cd_pick_date">Pilih tanggal</string>
-    <string name="cd_dropdown">Buka pilihan</string>
+
     <string-array name="experience_options">
         <item>&lt; 1 Tahun</item>
         <item>1 - 3 Tahun</item>
