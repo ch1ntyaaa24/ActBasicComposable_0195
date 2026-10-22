@@ -35,3 +35,13 @@ fun FormIsian(
     var textJK by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
 
+    Scaffold(
+        modifier = modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.home), color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
