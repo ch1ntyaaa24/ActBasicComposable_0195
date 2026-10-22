@@ -60,3 +60,34 @@ fun FormIsian(
                     .width(250.dp),
                 label = { Text(text = "Nama Lengkap") },
                 onValueChange = {},
+            )
+            HorizontalDivider(
+                modifier = Modifier
+                    .padding(all = 20.dp)
+                    .width(250.dp), thickness = DividerDefaults.Thickness, color = Color.Red
+            )
+            Row {
+                jenisK.forEach { item ->
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(
+                            selected = false,
+                            onClick = { item }
+                        )
+                        Text(text = item)
+                    }
+                }
+            }
+            HorizontalDivider(modifier = Modifier
+                .padding(all = 20.dp)
+                .width(250.dp),
+                thickness = 1.dp,
+                color = Color.Red
+            )
+            OutlinedTextField(
+                value = "",
+                singleLine = true,
+                modifier = Modifier
+                    .width(250.dp),
+                label = {Text(text = "Alamat")},
+                onValueChange = {},
+            )
