@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.questtugasuserinput.ui.theme.BiodataScreen
 import com.example.questtugasuserinput.ui.theme.QuestTugasUserInputTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,80 +23,4 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun BiodataScreen() {
-    var firstName by remember { mutableStateOf("") }
-    var lastName by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
-    var birthDate by remember { mutableStateOf("") }
-    var experience by remember { mutableStateOf("") }
-    var android by remember { mutableStateOf(false) }
-    var uiux by remember { mutableStateOf(false) }
-    var web by remember { mutableStateOf(false) }
-
-    var showDatePicker by remember { mutableStateOf(false) }
-    var expanded by remember { mutableStateOf(false) }
-    val options = stringArrayResource(R.array.experience_options)
-    val datePickerState = rememberDatePickerState()
-
-    val isFormValid = firstName.isNotBlank() && lastName.isNotBlank() &&
-            email.isNotBlank() && birthDate.isNotBlank() &&
-            experience.isNotBlank() && (android || uiux || web)
-    Scaffold(
-        containerColor = colorResource(R.color.screen_background)
-    ) { innerPadding ->
-        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
-
-            // Gambar header
-            Image(
-                painter = painterResource(R.drawable.header_spider),
-                contentDescription = stringResource(R.string.cd_header_image),
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(dimensionResource(R.dimen.header_height))
-            )
-            // Box form mengapung di atas Scaffold
-            Box(
-                modifier = Modifier
-                    .align(Alignment.BottomCenter)
-                    .fillMaxWidth()
-                    .fillMaxHeight(0.75f)
-                    .clip(RoundedCornerShape(
-                        topStart = dimensionResource(R.dimen.card_corner),
-                        topEnd = dimensionResource(R.dimen.card_corner)))
-                    .background(colorResource(R.color.card_background))
-                    .padding(dimensionResource(R.dimen.screen_padding))
-            ) {Column(
-                modifier = Modifier.verticalScroll(rememberScrollState()),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_medium))
-            ) {
-                Text(
-                    text = stringResource(R.string.form_title),
-                    color = colorResource(R.color.purple_title),
-                    fontSize = dimensionResource(R.dimen.title_size).value.sp,
-                    fontWeight = FontWeight.Bold
-                )
-                Text(
-                    text = stringResource(R.string.form_subtitle),
-                    color = colorResource(R.color.text_subtitle),
-                    fontSize = dimensionResource(R.dimen.subtitle_size).value.sp
-                )
-
-                Row(horizontalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.spacing_small))) {
-                    OutlinedTextField(
-                        value = firstName, onValueChange = { firstName = it },
-                        label = { Text(stringResource(R.string.first_name)) },
-                        shape = RoundedCornerShape(dimensionResource(R.dimen.field_corner)),
-                        singleLine = true, modifier = Modifier.weight(1f)
-                    )
-                    OutlinedTextField(
-                        value = lastName, onValueChange = { lastName = it },
-                        label = { Text(stringResource(R.string.last_name)) },
-                        shape = RoundedCornerShape(dimensionResource(R.dimen.field_corner)),
-                        singleLine = true, modifier = Modifier.weight(1f)
-                    )
-                }
 
